@@ -5,7 +5,7 @@
 
 Azure Batch lets you run large scale parallel and high-performant computing (HPC) jobs. Okay, that was a mouthful. All you need to know are the CLI commands to create jobs, their tasks and a pool.
 
-``` 
+``` bash
 az batch pool create 
     --id "my-pool-name" 
     --vm-size Standard_A1_v2 
@@ -14,13 +14,13 @@ az batch pool create
     --node-agent-sku-id "batch.node.ubuntu.16.04"
 ```
 
-``` 
+``` bash
 az batch job create 
     --id "my-job"                          
     --pool-id "my-pool-name"
 ```
 
-``` 
+``` bash
 az batch task create 
     --task-id "my-task"
     --job-id "my-job"
@@ -35,7 +35,7 @@ You might be asked the structure of a Dockerfile, so remember this flow:
 
 ### Azure Kubernetes Service (AKS)
 
-```
+```bash
 az aks create 
     -g "my-resource-group-name"
     - n "my-cluster"
@@ -50,6 +50,7 @@ Familiarize yourself on how to query data and apply filters from C# with `TableQ
 ``` c#
 public static async Task<List<User>> FindUsersAsync(CloudTable table, string name)
 {
+    // ⚠️ Remember how to create filters!
     var filterCondition = TableQuery.GenerateFilterCondition(
                                         "Name", 
                                         QueryComparison.Equal, 
@@ -65,7 +66,7 @@ Do checkout the other methods such as `TableOperation.Retrieve, TableOperation.D
 ## Cosmos DB
 
 *Create a Cosmos DB account*
-```
+```bash
 az cosmosdb create
     -g "my-resource-group-name"
     --name "cosmosDBaccountname"
@@ -73,7 +74,7 @@ az cosmosdb create
 
 ```
 *Create a database*
-```
+```bash
 az cosmosdb database create
     - g "my-resource-group-name"
     --name "cosmosDBaccountname"
