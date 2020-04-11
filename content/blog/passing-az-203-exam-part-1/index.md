@@ -70,7 +70,7 @@ Do checkout the other methods such as `TableOperation.Retrieve, TableOperation.D
 az cosmosdb create
     -g "my-resource-group-name"
     --name "cosmosDBaccountname"
-    --kind GlobalDocumentDB              # MongoDB | Cassandra | Gremlin
+    --kind GlobalDocumentDB  # MongoDB | Cassandra | Gremlin
 
 ```
 *Create a database*
