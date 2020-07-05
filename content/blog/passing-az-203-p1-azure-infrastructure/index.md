@@ -10,9 +10,6 @@ description: "Develop Azure Infrastructure as a Service Solutions - Study Guide"
 
 - [Azure Batch](#azure-batch)
 - [Containerized Solutions](#containerized-solutions)
-- [Azure Storage](#azure-storage)
-- [CosmosDB](#cosmos-db)
-- [Blob Storage](#blob-storage)
 ---
 
 ## Azure Batch

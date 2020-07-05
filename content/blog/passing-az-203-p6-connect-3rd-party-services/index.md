@@ -166,6 +166,8 @@ New-AzureRmServiceBusQueue
 
 ### Request/Reply patterns
 
+TODO: Add diagram
+
 *Single reply queue (**correlationId**)*
 
 *Reply queue for each client (**replyTo**)*
