@@ -6,6 +6,15 @@ description: "Develop Azure Infrastructure as a Service Solutions - Study Guide"
 ## *Develop Azure Infrastructure as a Service Solutions*
 ---
 
+ Welcome to Part 1 of the [AZ-203 study guide]((../passing-az-203-exam/)). In this post we'll cover:
+
+- [Azure Batch](#azure-batch)
+- [Containerized Solutions](#containerized-solutions)
+- [Azure Storage](#azure-storage)
+- [CosmosDB](#cosmos-db)
+- [Blob Storage](#blob-storage)
+---
+
 ## Azure Batch
 
 Azure Batch lets you run large scale parallel and high-performant computing (HPC) jobs. Okay, that was a mouthful. All you need to know are the CLI commands to create jobs, their tasks and a pool.

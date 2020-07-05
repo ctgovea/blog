@@ -6,6 +6,16 @@ description: "Connect and Consume 3rd Party Services - Study Guide"
 ## *Connect and Consume 3rd Party Services*
 ---
 
+ This is Part 3 of the [AZ-203 study guide]((../passing-az-203-exam/)). In this post we'll cover:
+
+- [Develop an App Service Logic App](#develop-an-app-service-logic-app)
+- [Retry Policies](#retry-policies)
+- [Azure Search](#azure-search)
+- [API Gateways](#api-gateways)
+- [Event Grid](#event-grid)
+- [Service Bus](#service-bus)
+---
+
 ## Develop an App Service Logic App
 
 A Logic App is a workflow you define to execute actions based on events, kind of an IFTTT version for your Azure subscription.
@@ -14,7 +24,7 @@ A Logic App is a workflow you define to execute actions based on events, kind of
 
 💡 In the exam, I was asked to drag-drop activities into a workflow.
 
-## Retry Policies ([📖 docs](https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-exception-handling))
+## Retry Policies 
 
 Review the 4 different retry policies and their [JSON representations](https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-exception-handling#retry-policies).
 
@@ -25,8 +35,10 @@ Review the 4 different retry policies and their [JSON representations](https://d
 | *Exponential interval* | Minimun interval: PT10S, Maximum interval: PT1H
 | *None* | Don't resend the request
 
+Further reading: [ Retry Policies documentation 📖](https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-exception-handling)
 
-## Azure Search: creating and populating a search index with data
+## Azure Search
+Creating and populating a search index with data.
 
 ### SearchServiceClient
 
