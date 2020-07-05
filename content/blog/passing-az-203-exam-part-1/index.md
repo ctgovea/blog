@@ -1,5 +1,10 @@
-
-# Develop Azure Infrastructure as a Service Solutions
+---
+title: "Passing the AZ-203 exam - *Part 1*"
+date: "2019-04-13T08:24:00.000Z"
+description: "Develop Azure Infrastructure as a Service Solutions - Study Guide"
+---
+## *Develop Azure Infrastructure as a Service Solutions*
+---
 
 ## Azure Batch
 

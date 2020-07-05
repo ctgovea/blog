@@ -1,5 +1,11 @@
+---
+title: "Passing the AZ-203 exam - *Part 2*"
+date: "2019-04-13T08:24:00.000Z"
+description: "Develop Azure Platform as a Service Compute Solutions - Study Guide"
+---
+## *Develop Azure Platform as a Service Compute Solutions*
+---
 
-# Develop Azure Platform as a Service Compute Solutions
 
 This is the 2nd module measured in the AZ-203 exam.
 
@@ -32,7 +38,7 @@ az webapp create
 
 ## Mobile Apps
 
-### Enabling offline sync for a mobile app [(See docs 📖)](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-offline-data-sync)
+### [Enabling offline sync for a mobile app](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-offline-data-sync)
 
 ```c#
 public async Task SyncAsync()
