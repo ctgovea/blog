@@ -1,6 +1,6 @@
 ---
 title: "Passing the AZ-203 exam - *Part 6*"
-date: "2019-04-13T08:24:00.000Z"
+date: "2019-05-21T08:24:00.000Z"
 description: "Connect and Consume 3rd Party Services - Study Guide"
 ---
 ## *Connect and Consume 3rd Party Services*
