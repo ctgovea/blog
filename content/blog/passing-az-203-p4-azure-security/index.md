@@ -76,13 +76,16 @@ Always Encrypted prevents admins from seeing sensitive data.
 
 ### Secure Access to an AKS Cluster
 
+TODO: Add diagram
+
 1. Create a Service Principal (SP) in Azure Active Directory, or AAD (representing the admin of the cluster)
 2. Map user to a ```ClusterRoleBinding``` role inside of the AKS cluster
 3. Create a SP for the cluster client
 4. Create an AKS cluster
 
-```c# 
-// ⚠️ How do you secure the AKS cluster?
-// Map a service principal into a ```ClusterRoleBinding```.
-```
+ ```bash
+ # ⚠️ How do you secure the AKS cluster?  
 
+ Map a service principal into a ClusterRoleBinding
+ ```
+ 

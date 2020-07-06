@@ -17,6 +17,8 @@ description: "Monitor Azure Solutions - Study Guide"
 
 ### Web App Logging
 
+### Filestream logging
+
 #### 1. Enable Application Logging with the CLI
 By default, application logging (both on filestream and blob) is disabled when you create a new application in Azure.
 
@@ -57,8 +59,18 @@ public HomeController(ILogger<HomeController> logger)
 }
 ```
 
+#### 4. Tail the logs
 
-#### 4. Write Trace Into
+```bash
+az webapp log tail
+  --n $appName
+  -g $resourceGroup
+```
+
+With this command, you can connect a terminal to log streaming service of an application. You should then see the log messages you output in your app as you click around.
+
+
+### Blob logging
 
 ```c#
 private static async Task runAsync() 
@@ -73,7 +85,7 @@ private static async Task runAsync()
 
   var appSettings = new StringDictionary(
     name: "properties",
-    // ⚠️ Important to know the name of these properties
+    // ⚠️ Changing the configuration of the logging using blobs
     properties: new Dictionary<string, string> {
       { "DIAGNOSTICS_AZUREBLOBCONTAINERSASURL", sasUrl },
       { "DIAGNOSTICS_AZUREBLOBRETENTIONDAYS", "30" },
