@@ -1,7 +1,7 @@
 ---
 title: "Passing the AZ-203 exam - Developing Solutions for Azure"
 date: "2020-04-13T08:24:00.000Z"
-description: ""
+description: "In this series of posts I'll share my notes for clearing the AZ-203 exam"
 ---
 
 In this post I'll share my notes for clearing the Developing Solutions for Azure (AZ-203) exam. 
