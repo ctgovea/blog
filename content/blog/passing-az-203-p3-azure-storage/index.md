@@ -58,7 +58,10 @@ Read up on the different
 
 ![Azure Cosmos DB Consistency Levels](./five-consistency-levels.png)
 
-You might be asked "you need to ensure reads reflect the most recent write". To which the answer would be a `strong` consistency level.
+```bash
+# ⚠️ How do you ensure reads reflect the most recent write". 
+With a strong consistency level.
+```
 
 ## Blob Storage
 
