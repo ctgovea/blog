@@ -1,12 +1,12 @@
 ---
-title: "Passing the AZ-203 exam - *Part 5*"
-date: "2019-05-18T07:21:00.000Z"
+title: "Passing the AZ-203 exam - Part 5"
+date: "2020-05-18T07:21:00.000Z"
 description: "Monitor Azure Solutions - Study Guide"
 ---
 ## *Monitor Azure Solutions*
 ---
 
- This is Part 5 of the [AZ-203 study guide]((../passing-az-203-exam/)). In this post we'll cover:
+ This is Part 5 of the [AZ-203 study guide](../passing-az-203-exam/). In this post we'll cover:
 
 - [Web App Logging](#web-app-logging)
 - [App Insights](#app-insights)

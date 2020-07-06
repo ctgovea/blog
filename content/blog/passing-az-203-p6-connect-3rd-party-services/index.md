@@ -1,12 +1,12 @@
 ---
-title: "Passing the AZ-203 exam - *Part 6*"
-date: "2019-05-21T08:24:00.000Z"
+title: "Passing the AZ-203 exam - Part 6
+date: "2020-05-21T08:24:00.000Z"
 description: "Connect and Consume 3rd Party Services - Study Guide"
 ---
 ## *Connect and Consume 3rd Party Services*
 ---
 
- This is Part 3 of the [AZ-203 study guide]((../passing-az-203-exam/)). In this post we'll cover:
+ This is Part 3 of the [AZ-203 study guide](../passing-az-203-exam/). In this post we'll cover:
 
 - [Develop an App Service Logic App](#develop-an-app-service-logic-app)
 - [Retry Policies](#retry-policies)

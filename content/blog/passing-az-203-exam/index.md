@@ -1,6 +1,6 @@
 ---
-title: "Passing the Developing Solutions for Azure (AZ-203) Exam"
-date: "2019-04-13T08:24:00.000Z"
+title: "Passing the AZ-203 exam - Developing Solutions for Azure"
+date: "2020-04-13T08:24:00.000Z"
 description: ""
 ---
 
