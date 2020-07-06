@@ -1,7 +1,7 @@
 ---
-title: "Passing the AZ-203 exam - *Part 1*"
+title: "Passing the AZ-203 exam - *Part 3*"
 date: "2019-04-13T08:24:00.000Z"
-description: "Develop Azure Infrastructure as a Service Solutions - Study Guide"
+description: "Develop for Azure Storage - Study Guide"
 ---
 ## *Develop Azure Infrastructure as a Service Solutions*
 ---

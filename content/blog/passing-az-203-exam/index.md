@@ -26,6 +26,7 @@ The AZ-203 is quite code heavy. It requires you to be familiar with the Azure CL
 
 - See the [exam skills outline](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3VEHC), from Microsoft, with the list of things you need to know.
 - Study the modules listed in the [Learning path for Azure Developer](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWtQqM)
+- I highly recommend taking the course [Microsoft Certified Azure Developer – Exam AZ-203 Prep](https://linuxacademy.com/course/microsoft-certified-azure-developer-exam-az-203-prep/) on Linux Academy. They have labs where you can spin up cloud resources and get hands-on experience.
 
 
 
