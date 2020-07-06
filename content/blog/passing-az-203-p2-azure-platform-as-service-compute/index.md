@@ -17,12 +17,14 @@ This is the 2nd module measured in the AZ-203 exam.
 
 ## App Service Web Apps
 
-*[Create a resource group](https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest#az-group-create)*
+*Create a resource group*
 ```bash
 az group create -n "my-rg-apps" -l westus
 ````
 
-*[Create an App Service plan](https://docs.microsoft.com/en-us/cli/azure/appservice/plan?view=azure-cli-latest)*
+*[az group create](https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest#az-group-create)*
+
+*Create an App Service plan*
 ```bash
 appservice plan create              
     -n "githubdeployplan"
@@ -31,8 +33,9 @@ appservice plan create
     --is-linux
 ````
 
+[az appservice plan](https://docs.microsoft.com/en-us/cli/azure/appservice/plan?view=azure-cli-latest)
 
-*[Create a web app](https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest#az-webapp-create)*
+*Create a web app*
 
 ```bash
 az webapp create
@@ -42,9 +45,11 @@ az webapp create
     --deployment-container-image-name "microsoft/dotnet-samples:aspnetapp"
 ```
 
+[az webapp create reference](https://docs.microsoft.com/en-us/cli/azure/webapp?view=azure-cli-latest#az-webapp-create)
+
 ## Mobile Apps
 
-### [Enabling offline sync for a mobile app](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-offline-data-sync)
+### Enabling offline sync for a mobile app
 
 ```c#
 public async Task SyncAsync()
@@ -64,6 +69,8 @@ public async Task SyncAsync()
 
 }
 ```
+
+📖 Further reading: [Offline Data Sync in Azure Mobile Apps](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-offline-data-sync)
 
 ## Azure Functions
 
@@ -93,4 +100,4 @@ public static void ProcessOrders(
 
 💡 When the number being processed gets down to 8, the runtime gets another batch of 16 messages.
 
-📖 More info: [Azure Queue storage trigger for Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-storage-queue-trigger?tabs=csharp)
+📖 Further reading: [Azure Queue storage trigger for Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-storage-queue-trigger?tabs=csharp)
