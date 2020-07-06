@@ -77,3 +77,7 @@ await cloudBlockBlob.ReleaseLeaseAsync(new AccessCondition()
     LeaseId = leaseId
 })
 ```
+
+## Next up...
+
+Go to Part 4 of the series on [Azure Security](../passing-az-203-p4-azure-security)

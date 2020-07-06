@@ -53,3 +53,7 @@ az aks create
     --node-count 1
     --generate-ssh-keys
 ```
+
+## Next up...
+
+Go to Part 2 of the series on the [Azure Platform as a Service Compute Solution](../passing-az-203-p2-azure-platform-as-service-compute)

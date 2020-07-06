@@ -152,3 +152,7 @@ Scaling out and in, meaning we add or remove instances of a resource.
 
 Put session state into that cache.
 ```
+
+## Next up...
+
+You're almost there! Go to the last section on [Connecting 3rd party services](../passing-az-203-p6-connect-3rd-party-services)

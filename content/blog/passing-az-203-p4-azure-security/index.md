@@ -103,4 +103,7 @@ TODO: Add diagram
 
  Map a service principal into a ClusterRoleBinding
  ```
- 
+
+## Next up...
+
+Go to Part 5 of the series on [Monitoring Azure Solutions](../passing-az-203-p5-monitor-azure-solutions)

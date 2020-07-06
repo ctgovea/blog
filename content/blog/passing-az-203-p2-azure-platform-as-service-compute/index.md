@@ -101,3 +101,8 @@ public static void ProcessOrders(
 💡 When the number being processed gets down to 8, the runtime gets another batch of 16 messages.
 
 📖 Further reading: [Azure Queue storage trigger for Azure Functions](https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-storage-queue-trigger?tabs=csharp)
+
+
+## Next up...
+
+Go to Part 3 of the series for [Developing for Azure Storage](../passing-az-203-p3-azure-storage)
