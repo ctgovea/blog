@@ -11,6 +11,7 @@ description: "Develop Azure Platform as a Service Compute Solutions - Study Guid
 - [App Service Web Apps](#app-service-web-apps)
 - [Mobile Apps](#mobile-apps)
 - [Azure Functions](#azure-functions)
+
 ---
 
 This is the 2nd module measured in the AZ-203 exam.

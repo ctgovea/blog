@@ -14,6 +14,7 @@ description: "Azure Security - Study Guide"
 - [Dynamic Data Masking](#dynamic-data-masking)
 - [Always Encrypted](#always-encrypted)
 - [Secure Access to an AKS Cluster](#secure-access-to-an-aks-cluster)
+
 ---
 
 ### Service Principal
