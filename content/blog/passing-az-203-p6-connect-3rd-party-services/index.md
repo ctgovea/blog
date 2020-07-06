@@ -210,6 +210,7 @@ This actually works well with some messaging systems, for example, RabbitMQ, but
 #### Sessions (replyToSessionId)
 
 ```bash
+# ⚠️ 
 ReplyToSessionId = session number
 ```
 
