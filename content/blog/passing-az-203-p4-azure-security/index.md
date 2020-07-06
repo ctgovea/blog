@@ -60,9 +60,24 @@ private static async Task RunAsync()
 
 ### Dynamic Data Masking
 
-DDM is good for "masking" parts of data from users not logged in to the application (also known as "public" or "excluded"). You need the schema, table and column of a database to configure it. 
+💡 DDM is good for "masking" parts of data from users not logged in to the application (also known as "public" or "excluded"). 
 
-Pay attention to **SuffixSize** and **PrefixSize** as they will specify the number of characters that will <span style="text-decoration: underline">NOT</span> be masked. To hide the rest of the characters, you must specify a **ReplacementString** with the length of the string minus the Suffix/Prefix size.
+💡 You need the schema, table and column of a database to configure it. 
+
+💡 Pay attention to **SuffixSize** and **PrefixSize** as they will specify the number of characters that will <span style="text-decoration: underline">NOT</span> be masked. To hide the rest of the characters, you must specify a **ReplacementString** with the length of the string minus the Suffix/Prefix size.
+
+```powershell
+New-AzureRmSqlDatabaseDataMaskingRole
+  -ServerName $serverName
+  -DatabaseName $databaseName
+  -ResourceGroupName $resourceGroupName
+  -SchemaName "dbo"
+  -MaskingFunction Text
+  -Tablename "Users"
+  -ColumnName "AccountCode"
+  -SuffixSize 2   #only last 2 characters will be shown
+  -ReplacementString  # "xxxxxxx45"
+```
 
 ### Always Encrypted
 
