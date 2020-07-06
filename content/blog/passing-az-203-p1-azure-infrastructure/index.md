@@ -1,12 +1,12 @@
 ---
-title: "Passing the AZ-203 exam - *Part 1*"
-date: "2019-04-13T08:24:00.000Z"
+title: "Passing the AZ-203 exam - Part 1"
+date: "2020-04-14T08:24:00.000Z"
 description: "Develop Azure Infrastructure as a Service Compute Solution - Study Guide"
 ---
 ## *Develop Azure Infrastructure as a Service Solutions*
 ---
 
- Welcome to Part 1 of the [AZ-203 study guide]((../passing-az-203-exam/)). In this post we'll cover:
+ Welcome to Part 1 of the [AZ-203 study guide](../passing-az-203-exam/). In this post we'll cover:
 
 - [Azure Batch](#azure-batch)
 - [Containerized Solutions](#containerized-solutions)

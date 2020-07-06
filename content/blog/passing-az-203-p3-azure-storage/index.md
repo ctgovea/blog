@@ -1,12 +1,12 @@
 ---
-title: "Passing the AZ-203 exam - *Part 3*"
-date: "2019-04-13T08:24:00.000Z"
+title: "Passing the AZ-203 exam - Part 3"
+date: "2020-04-19T08:24:00.000Z"
 description: "Develop for Azure Storage - Study Guide"
 ---
 ## *Develop Azure Infrastructure as a Service Solutions*
 ---
 
- This is Part 3 of the [AZ-203 study guide]((../passing-az-203-exam/)). In this post we'll cover:
+ This is Part 3 of the [AZ-203 study guide](../passing-az-203-exam/). In this post we'll cover:
 
 - [Azure Storage](#azure-storage)
 - [CosmosDB](#cosmos-db)

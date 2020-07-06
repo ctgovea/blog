@@ -1,12 +1,12 @@
 ---
-title: "Passing the AZ-203 exam - *Part 2*"
-date: "2019-04-13T08:24:00.000Z"
+title: "Passing the AZ-203 exam - Part 2"
+date: "2020-04-15T08:24:00.000Z"
 description: "Develop Azure Platform as a Service Compute Solutions - Study Guide"
 ---
 ## *Develop Azure Platform as a Service Compute Solutions*
 ---
 
- This is Part 2 of the [AZ-203 study guide]((../passing-az-203-exam/)). In this post we'll cover:
+ This is Part 2 of the [AZ-203 study guide](../passing-az-203-exam/). In this post we'll cover:
 
 - [App Service Web Apps](#app-service-web-apps)
 - [Mobile Apps](#mobile-apps)

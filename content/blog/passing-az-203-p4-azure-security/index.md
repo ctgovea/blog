@@ -1,12 +1,12 @@
 ---
-title: "Passing the AZ-203 exam - *Part 4*"
-date: "2019-05-07T10:36:00.000Z"
+title: "Passing the AZ-203 exam - Part 4"
+date: "2020-05-07T10:36:00.000Z"
 description: "Azure Security - Study Guide"
 ---
 ## *Azure Security*
 ---
 
- This is Part 4 of the [AZ-203 study guide]((../passing-az-203-exam/)). In this post we'll cover:
+ This is Part 4 of the [AZ-203 study guide](../passing-az-203-exam/). In this post we'll cover:
 
 - [Service Principal](#service-principal)
 - [Read KeyVault secrets from C#](#read-keyvault-secrets-from-c)
