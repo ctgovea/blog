@@ -82,7 +82,6 @@ indexClientForUpload.Documents.Index(batch);
 
 ```
 
-
 ### Search
 
 ```c#
@@ -124,18 +123,23 @@ The Event Grid can be really helpful to build the backbone of serverless applica
 {
     "destination": {
         "endpointBaseUrl": "https://my-id.ngrok.io/api/updates",
-        "endpointType": "WebHook",      
+        "endpointType": "WebHook",      // ⚠️
         "endpointUrl": null
     },
     "filter": {
         "includedEventTypes": [
-            "Microsoft.Storage.BlobCreated"
+            "Microsoft.Storage.BlobCreated"         // ⚠️ 
         ],
         "subjectBeginsWith": "/blobServices/default/containers/testcontainer"
     }
 }
 ```
 ⚠️ Make sure to understand the JSON for configuring a blob-created event subscription.
+
+```bash
+# ⚠️ What are webhooks?
+A common means of consuming events.
+```
 
 Further reading: 
 - [What is Azure Event Grid?](https://docs.microsoft.com/en-us/azure/event-grid/overview)
@@ -144,9 +148,17 @@ Further reading:
 
 ## Service Bus
 
+A service bus is a fully managed message broker that gives you these benefits:
 
-*Create a queue*
+- Decoupled applications and services
+- Session management
+- Routing
+- Dead-lettering
+- Scheduling
+
+### Create a queue
 ``` bash
+# ⚠️ Creating a service bus queue in Azure CLI
 az servicebus queue create
     --namespace-name az203sb
     -g servicebus
@@ -156,6 +168,7 @@ az servicebus queue create
 Or the equivalent powershell command:
 
 ``` ps
+# ⚠️ Creating a service bus queue in Powershell
 New-AzureRmServiceBusQueue
     -ResourceGroupName servicebus
     -NamespaceName az203sb
@@ -164,12 +177,40 @@ New-AzureRmServiceBusQueue
 ```
 ⚠️ Note that there are some questions in the exam where the answers are in Powershell.
 
-### Request/Reply patterns
+### Service Bus Routing
 
-TODO: Add diagram
+A service bus queue is inherently for handling asynchronous calls. Fire and forget. So, if you need a response, before you can continue execution, how do you handle that? Let's look at a few examples.
 
-*Single reply queue (**correlationId**)*
+#### Single reply queue (correlationId)
 
-*Reply queue for each client (**replyTo**)*
 
-*Sessions (**replyToSessionId**)*
+```bash
+CorrelationId = MessageId
+```
+
+![Single Reply Queue](./single-reply-queue.png)
+
+
+This works fine for a single client. But, as soon as you introduce a second client, since there is a shared queue, you can't tell which reply belongs to which client.
+
+One way this can be solved is by using a queue for each client, which we'll see next.
+
+#### Reply queue for each client
+
+```bash
+ReplyTo = client
+```
+
+In this scenario, each client has the responsibility to create its own temporary queue. Then, each client sends along with its requests sends the **ReplyTo** property.
+
+![Reply Queue for Each Client](./reply-queue-each-client.png)
+
+This actually works well with some messaging systems, for example, RabbitMQ, but in the end it doesn't scale that well.
+
+#### Sessions (replyToSessionId)
+
+```bash
+ReplyToSessionId = session number
+```
+
+![Sessions](./sessions.png)
