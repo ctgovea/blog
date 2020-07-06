@@ -21,6 +21,7 @@ The AZ-203 is quite code heavy. It requires you to be familiar with the Azure CL
 - [Implement Azure Security](../passing-az-203-p4-azure-security)
 - [Monitor, troubleshoot and optimize solutions](../passing-az-203-p5-monitor-azure-solutions)
 - [Connect to and consume Azure and third-party services](../passing-az-203-p6-connect-3rd-party-services)
+
 ## Resources
 
 - See the [exam skills outline](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3VEHC), from Microsoft, with the list of things you need to know.

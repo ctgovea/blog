@@ -11,6 +11,7 @@ description: "Develop for Azure Storage - Study Guide"
 - [Azure Storage](#azure-storage)
 - [CosmosDB](#cosmos-db)
 - [Blob Storage](#blob-storage)
+
 ---
 
 ## Azure Storage

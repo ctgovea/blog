@@ -14,6 +14,7 @@ description: "Connect and Consume 3rd Party Services - Study Guide"
 - [API Gateways](#api-gateways)
 - [Event Grid](#event-grid)
 - [Service Bus](#service-bus)
+
 ---
 
 ## Develop an App Service Logic App

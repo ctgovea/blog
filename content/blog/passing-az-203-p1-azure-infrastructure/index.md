@@ -10,6 +10,7 @@ description: "Develop Azure Infrastructure as a Service Compute Solution - Study
 
 - [Azure Batch](#azure-batch)
 - [Containerized Solutions](#containerized-solutions)
+
 ---
 
 ## Azure Batch

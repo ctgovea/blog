@@ -13,6 +13,7 @@ description: "Monitor Azure Solutions - Study Guide"
 - [Usage Analytics](#usage-analytics)
 - [Optimize Azure Solutions](#optimize-azure-solutions)
 - [Redis Caching for ASP.NET](#redis-caching-for-aspnet)
+
 ---
 
 ### Web App Logging
