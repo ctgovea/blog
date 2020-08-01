@@ -3,12 +3,18 @@ module.exports = {
     title: `Blog`,
     author: `Carlos Torres`,
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://carlostorresg.com/`,
     social: {
       twitter: `ctgovea`,
     },
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-174142998-1`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -48,12 +54,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
-    },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
