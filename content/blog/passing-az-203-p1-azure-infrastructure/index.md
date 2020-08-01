@@ -17,7 +17,7 @@ description: "Develop Azure Infrastructure as a Service Compute Solution - Study
 
 Azure Batch lets you run large scale parallel and high-performant computing (HPC) jobs. Okay, that was a mouthful. All you need to know are the CLI commands to create jobs, their tasks and a pool.
 
-``` bash
+```bash
 az batch pool create 
     --id "my-pool-name" 
     --vm-size Standard_A1_v2 
@@ -26,13 +26,13 @@ az batch pool create
     --node-agent-sku-id "batch.node.ubuntu.16.04"
 ```
 
-``` bash
+```bash
 az batch job create 
-    --id "my-job"                          
+    --id "my-job"
     --pool-id "my-pool-name"
 ```
 
-``` bash
+```bash
 az batch task create 
     --task-id "my-task"
     --job-id "my-job"
