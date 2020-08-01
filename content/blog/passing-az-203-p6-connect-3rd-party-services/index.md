@@ -44,7 +44,7 @@ Creating and populating a search index with data.
 ### SearchServiceClient
 
 
-```c#
+```cs
 // The operations related to managing indexes are performed using a `SearchServiceClient` object.
 
 var serviceClient = new SearchServiceClient(
@@ -55,7 +55,7 @@ var serviceClient = new SearchServiceClient(
 
 ### Create an index
 
-``` c#
+``` cs
 // Create an index with a list of fields with the [IsSearchable] attribute in the Order class.
 
 var definition = new Index()
@@ -68,7 +68,7 @@ serviceClient.Indexes.Create(definition)
 
 ### Prepare a batch of documents for upload
 
-```c#
+```cs
 var indexClientForUpload = serviceClient.Indexes.GetClient("orders");
 
 var batch = IndexBatch.Upload(orders); // orders being an array of Order objects.
@@ -78,14 +78,14 @@ var batch = IndexBatch.Upload(orders); // orders being an array of Order objects
 
 ### Actually upload the orders
 
-```c#
+```cs
 indexClientForUpload.Documents.Index(batch);
 
 ```
 
 ### Search
 
-```c#
+```cs
 var indexClientForQuery = new SearchIndexClient(
     "my-search-service-name",
     "orders",

@@ -18,7 +18,7 @@ description: "Develop for Azure Storage - Study Guide"
 
 Familiarize yourself on how to query data and apply filters from C# with `TableQuery.GenerateFilterCondition` and `TableQuery.Where`
 
-``` c#
+``` cs
 public static async Task<List<User>> FindUsersAsync(CloudTable table, string name)
 {
     // ⚠️ Remember how to create filters!
@@ -68,7 +68,7 @@ With a strong consistency level.
 
 The exam tends to ask questions about concurrency control in blobs. This involves using leases to checkout and block files so only you can update.
 
-```c#
+```cs
 var leaseId = Guid.NewGuid().ToString();
 
 cloudBlockBlob.AcquireLease(TimeSpan.FromSeconds(30), leaseId);

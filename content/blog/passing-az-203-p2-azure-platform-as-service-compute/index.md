@@ -52,7 +52,7 @@ az webapp create
 
 ### Enabling offline sync for a mobile app
 
-```c#
+```cs
 public async Task SyncAsync()
 {
     try {
@@ -75,7 +75,7 @@ public async Task SyncAsync()
 
 ## Azure Functions
 
-```c#
+```cs
 // ⚠️ Functions with a [QueueTrigger] attribute process Storage Queues messages
 
 // ⚠️ Functions with a [Table] attribute will output to a Storage Table.

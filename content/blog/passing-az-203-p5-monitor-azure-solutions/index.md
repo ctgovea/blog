@@ -37,7 +37,7 @@ After running this CLI command, you'll see application logging is turned on for 
 
 #### 2. Enable logging in your app
 
-```c#
+```cs
 // Program.cs
 
 public static IWebHostBuilder CreateWebHostBuilder(string[] args
@@ -50,7 +50,7 @@ public static IWebHostBuilder CreateWebHostBuilder(string[] args
 ```
 
 #### 3. Inject Logger in Controller
-```c#
+```cs
 private ILogger _logger = null;
 
 public HomeController(ILogger<HomeController> logger)
@@ -73,7 +73,7 @@ With this command, you can connect a terminal to log streaming service of an app
 
 ### Blob logging
 
-```c#
+```cs
 private static async Task runAsync() 
 {
   //...
