@@ -23,7 +23,7 @@ A service principal is a non-human based identity in Azure Active Directory (AD)
 
 ### Read KeyVault secrets from C#
 
-``` c#
+``` cs
 private static async Task RunAsync()
 {
     var astp = new AzureServiceTokenProvider();
@@ -43,7 +43,7 @@ private static async Task RunAsync()
 
 ### Storage Accounts & MSI
 
-``` c#
+``` cs
 private static async Task RunAsync()
 {
     var astp = new AzureServiceTokenProvider();
@@ -86,13 +86,11 @@ Always Encrypted prevents admins from seeing sensitive data.
 
 1. Column certs should be in Key Vault
 2. Encrypt column with certificate
-3. Set ```Column Encryption Setting = true ```in the database connection
+3. Set ```Column Encryption Setting = true ``` in the database connection
 4. Add an identity to the web app
 5. Grant that app/identity access to the certificate in Key Vault
 
 ### Secure Access to an AKS Cluster
-
-TODO: Add diagram
 
 1. Create a Service Principal (SP) in Azure Active Directory, or AAD (representing the admin of the cluster)
 2. Map user to a ```ClusterRoleBinding``` role inside of the AKS cluster
