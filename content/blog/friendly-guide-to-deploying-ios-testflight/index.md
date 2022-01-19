@@ -13,14 +13,14 @@ This is the post I wish was available when I was doing this. Don't worry if you 
 
 You can check out the final version of the [repo here](https://github.com/CircleCI-Public/circleci-demo-react-native)
 
-- Installing fastlane
-- Configuring fastlane
-- Code Signing
-- Code Signing with Match
-- Build the app
-- App Store Connect
-- Submit to TestFlight
-- Using CircleCI
+- [Installing fastlane](#installing-fastlane)
+- [Configuring fastlane](#configuring-fastlane)
+- [Code Signing](#code-signing)
+- [Code Signing with Match](#Code-Signing-with-Match)
+- [Build the app](#Build-the-app)
+- [App Store Connect](#App-Store-Connect)
+- [Submit to TestFlight](#Submit-to-TestFlight)
+- [Using CircleCI](#Using-CircleCI)
 
 -------
 ## Installing fastlane
