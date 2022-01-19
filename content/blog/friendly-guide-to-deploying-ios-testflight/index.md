@@ -3,7 +3,7 @@ title: "Friendly Guide to Deploy a React Native iOS app to TestFlight using Fast
 date: "2022-01-18T20:00:03.284Z"
 description: "Create a CircleCI pipeline to deploy iOS to Testflight"
 ---
-![[Pasted image 20220118175301.png]]
+![CircleCI_Fastlane_Testflight](_circleci-fastlane-testflight.png)
 
 You have a React Native application and you want to automate the process to build the iOS version and make it available to beta testers.
 
@@ -98,8 +98,7 @@ fastlane init
 
 fastlane will ask if you want to include a pre-built task in your automation. We'll manually do all this so enter **4**.
 
-![[_fastlane-init.png]]
-
+![fastlane init](_fastlane-init.png)
 A new `fastlane` folder was created with 2 files:
 
 - **Appfile** - contains the app identifier (or bundle id) and the apple id.
@@ -122,7 +121,7 @@ The bundle identifier uniquely identifies an application within the Apple ecosys
 
 This is defined in Xcode and Apple encourages to use [reverse domain name notation](https://en.wikipedia.org/wiki/Reverse_domain_name_notation) (eg. *com.my-company.myapp*), but it can really be anything you want, as long as it's unique and it's not already taken.
 
-![[_Xcode_signing.png]]
+![Xcode signing](_Xcode_signing.png)
 
 Once you publish an app to the App Store, the bundle ID cannot be modified. Well, it could, but you would lose your app history, reviews.. in the App Store.
 
@@ -130,11 +129,11 @@ Once you publish an app to the App Store, the bundle ID cannot be modified. Well
 
 The App ID combines both the Team ID and the Bundle ID.
 
-![[_whats-app-id.png]]
+![What is an App ID](_whats-app-id.png)
 
 This is what you see when you register a new *App ID* in the Developer Portal
 
-![[_AppID.png]]
+![AppID](_AppID.png)
 
 -------
 ## Code signing
@@ -166,7 +165,7 @@ In your terminal run:
 fastlane match init
 ```
 
-![[Pasted image 20211208213052.png]]
+![fastlane match init](_fastlane-match-init.png)
 
 A `Matchfile` file has been created pointing to the private git repo specified. 
 
@@ -186,7 +185,7 @@ Create a development certificate with:
 fastlane match development
 ```
 
-![[_fastlane-match-dev.png]]
+![fastlane match dev](_fastlane-match-dev.png)
 
 When running *match* for the first time on a new machine, you will be asked for a passphrase. This is an additional layer of security as each of the files are encrypted using `openssl`. As we want CircleCI to do the build for us, we'll set the passphrase in an environment variable in CircleCI later on.
 
@@ -194,9 +193,9 @@ Secondly, you will be asked for a username and password to the Apple Developer P
 
 In the Apple Developer portal, in the [certificates list](https://developer.apple.com/account/resources/certificates/list), you should see a new "development" certificate was created along with a new [provisioning profile](https://developer.apple.com/account/resources/profiles/list)
 
-![[_DeveloperPortal-Certificates.png]]
+![Developer Portal Certificates](_DeveloperPortal-Certificates.png)
 
-![[_DeveloperPortal-Profiles.png]]
+![Developer Portal Profiles](_DeveloperPortal-Profiles.png)
 
 Similarly, you should see the files now show up in your git match repository.
 
@@ -205,7 +204,7 @@ Under the hood, *fastlane* uses 2 actions: [cert](http://docs.fastlane.tools/act
 ### Sharing signing secrets with your team
 
 Once files are created in the repo, your team can get them by using the `read-only` option. This command doesn't ask you for a password to the Apple Developer portal. Just provide them with the passphrase so fastlane can decrypt the files (they should have access to the private match repo too).
-![[_fastlane-match-dev-readonly.png]]
+![Reading dev secrets](_fastlane-match-dev-readonly.png)
 The *"development"* certificate is used to deploy to internal devices in your team.
 
 Similarly, you can create a *"distribution"* certificate to deploy your app to TestFlight and the AppStore.
@@ -262,7 +261,7 @@ faslane ios certificates
 
 to get an output like this. 
 
-![[_fastlane-ios-certificates.png]]
+![fastlane ios certificates](_fastlane-ios-certificates.png)
 
 But, we actually won't use the `certificates` lane directly. We'll create another lane to build the app and we'll call certificates from there.
 
@@ -272,7 +271,7 @@ Note that when you're code signing with fastlane match, you need to disable *aut
 
 Select the correct *Provisioning Profile*.
 
-![[_manual-signing.png]]
+![manual signing](_manual-signing.png)
 
 The provisioning profile set in your Xcode needs to be of the same type (appstore, development) as the one you are pulling from your match repo, otherwise you can get the `Xcode couldn't find any provisioning profiles matching...` or `No signing certificate "iOS Development" found` error.
 
@@ -291,7 +290,7 @@ A provisioning profile is required for installing an app in your phone and conta
 
 These 4 items can be seen when you open a [Provisioning Profile](https://developer.apple.com/account/resources/profiles) in the Apple Developer portal.
 
-![[_provisioning-profile.png]]
+![Provisioning Profile](_provisioning-profile.png)
 
 > A provisioning profile is a collection of digital entities that uniquely ties developers and devices to an authorized iPhone Development Team and enables a device to be used for testing. [iPhone Developer Program](https://developer.apple.com/programs/information/Apple_Developer_Program_Information_8_12_15.pdf)
 
@@ -317,7 +316,7 @@ Build the application by running on your terminal:
 fastlane ios build
 ```
 
-![[_fastlane-ios-build.png]]
+![fastlane ios build](_fastlane-ios-build.png)
 Congratulations, you have a signed .ipa file! 
 
 Let's now turn our attention to deploying to TestFlight.
@@ -337,15 +336,15 @@ You will need an App Store Connect admin account for this.
 
 Navigate to the [Users and Access > Keys](https://appstoreconnect.apple.com/access/api) page and click "Generate API Key" or the Add (+) button.
 
-![[_appstore-connect-key.png]]
+![AppStore Connect Key](_appstore-connect-key.png)
 
 Give it a name and select the role with the [minimum access you need](https://help.apple.com/app-store-connect/#/deve5f9a89d7). Unfortunately, an API Key cannot be restricted to specific apps. 
 
-![[_generate-api-key.png]]
+![Generate API key](_generate-api-key.png)
 
 Refresh the page to see the newly created key (it can take up to a few seconds for the *Download API Key* button to appear)
 
-![[_appstore-connect-new-key.png]]
+![AppStore Connect New Key](_appstore-connect-new-key.png)
 
 Copy the *issuer_id*, *Key ID* and download the key (can only be done once).
 
@@ -414,7 +413,7 @@ Use the *beta* lane to submit to TestFlight:
 fastlane ios beta
 ```
 
-![[_fastlane-ios-beta.png]]
+![fastlane ios beta](_fastlane-ios-beta.png)
 Error: *"A Distribution Provisioning profile should be used when submitting apps to the App Store"*
 
 Ah, that's right, we're using a `development` provisioning profile but we need an `distribution` profile in order to submit to TestFlight.
@@ -485,9 +484,7 @@ git@bitbucket.org:awesome-company/match-reactnativecicd.git
 
 You can get the SSH address in Bitbucket by clicking Clone in the top-right, and then selecting SSH from the dropdown
 
-![[Pasted image 20220118160114.png]]
-
-![[_bitbucket-clone-repo.png]]
+![Bitbucket Clone Repo](_bitbucket-clone-repo.png)
 
 ### Add environment variables to CircleCI
 
@@ -610,11 +607,11 @@ workflows:
 ```
 
 The process looks like this in CircleCI
-![[_circleci-approval-needed.png]]
+![CircleCI Approval Needed](_circleci-approval-needed.png)
 
 And once the approval is given it continues to build and deploy to TestFlight.
 
-![[_circleci-approved-step.png]]
+![CircleCI Approved Step](_circleci-approved-step.png)
 
 
 ## Conclusion
