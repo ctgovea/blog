@@ -616,4 +616,4 @@ And once the approval is given it continues to build and deploy to TestFlight.
 
 ## Conclusion
 
-Automating the building and delivery of an iOS application can be a daunting task. fastlane helps us abstract a lot but it is easy to have things fall through the cracks with all the different tools involved. Hope this guide was helpful to distill the steps that are required and to see how they all fit together..
+Automating the building and delivery of an iOS application can be a daunting task. fastlane helps us abstract a lot but it is easy to have things fall through the cracks with all the different tools involved. Hope this guide was helpful to distill the steps that are required and to see how they all fit together.
