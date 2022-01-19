@@ -11,7 +11,7 @@ In this post we'll use fastlane to build a sample iOS app written in React Nativ
 
 This is the post I wish was available when I was doing this. Don't worry if you are unfamiliar with some terms. We'll start from scratch without assuming prior knowledge and explain things as we go.
 
-You can check out the final version of the [repo here](https://github.com/CircleCI-Public/circleci-demo-react-native)
+You can check out the final version of the [repo here](https://github.com/govea/ReactNativeCICD)
 
 - [Installing fastlane](#installing-fastlane)
 - [Configuring fastlane](#configuring-fastlane)
