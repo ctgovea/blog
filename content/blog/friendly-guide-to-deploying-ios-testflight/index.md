@@ -123,7 +123,7 @@ This is defined in Xcode and Apple encourages to use [reverse domain name notati
 
 ![Xcode signing](_Xcode_signing.png)
 
-Once you publish an app to the App Store, the bundle ID cannot be modified. Well, it could, but you would lose your app history, reviews.. in the App Store.
+Once you publish an app to the App Store, the bundle ID cannot be modified. Well, it could, but you would lose your app history, reviews... in the App Store.
 
 #### Wait, so what's an App ID then?
 
@@ -297,7 +297,7 @@ These 4 items can be seen when you open a [Provisioning Profile](https://develop
 -------
 ## Building the app
 
-Add a build lane to your Fastfile
+Add a build lane to your Fastfile. We'll do 2 things here: getting the certificates from the match repo and building the application.
 
 ```ruby
 desc 'Fetch code signing secrets. Build the iOS application.'
@@ -432,7 +432,7 @@ We require to build the application again, this time using a distribution profil
 
 3. In Xcode, update the provisioning profile under *Signing & Capabilities* to use "match AppStore [your.bundle.id]".
 	
-	Note: if you see an error *"Provisioning profile (...) doesn't include signing certificate"* try restarting Xcode 🤷‍♂️.
+	Note: if you see an error *"Provisioning profile (...) doesn't include signing certificate"* try toggling the *Automatically manage signing* checkbox on and off, or restarting Xcode 🤷‍♂️.
 
 Rebuild the app and submit to TestFlight.
 
@@ -481,7 +481,7 @@ You might have noticed we had been using http to read signing secrets from our m
 https://carlostorresg@bitbucket.org/awesome-company/match-reactnativecicd.git
 ```
 
-This is fine when running fastlane locally your using your specific username, but for CircleCI we need an SSH address:
+This is fine when running fastlane locally and you are using your specific username, but for CircleCI we need an SSH address:
 
 ```bash
 # SSH repo address
