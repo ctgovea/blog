@@ -448,12 +448,13 @@ So far everything we've done has been locally. We get signing secrets, build and
 
 Finally, let's create a pipeline in CircleCI to do this for us. It will bring us a few advantages:
 
-💻 Build in the cloud, not from your developer's mac
-🚫 No need to grant your team access to the Developer Portal
-🔑 Keep your signing secrets... secret! :) 
-💥 Start building as soon as there is new code in your repo
-🚀 Submit the new build to Testflight automatically
-👩‍🔬 Testers in Testflight will get a notification when a new version becomes available
+
+> 💻  Build in the cloud, not from your developer's mac  
+🚫  No need to grant your team access to the Developer Portal  
+🔑  Keep your signing secrets... secret! :)  
+💥  Start building as soon as there is new code in your repo  
+🚀  Submit the new build to Testflight automatically  
+👩‍🔬  Testers in Testflight will get a notification when a new version becomes available  
 
 ### Connecting Bitbucket and CircleCI
 
