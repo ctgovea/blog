@@ -1,5 +1,10 @@
 // custom typefaces
-import "typeface-montserrat"
-import "typeface-merriweather"
+import "@fontsource/montserrat/variable.css"
+import "@fontsource/merriweather"
+// normalize CSS across browsers
+import "./src/normalize.css"
+// custom CSS styles
+import "./src/style.css"
 
-import "prismjs/themes/prism-okaidia.css"
+// Highlighting for code blocks
+import "prismjs/themes/prism.css"
