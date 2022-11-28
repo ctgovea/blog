@@ -126,7 +126,7 @@ module.exports = {
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
-          "UA-174142998-1", // Google Analytics / GA
+          "G-HE7B5Q57P4", // Google Analytics / GA
         ],
         gTagConfig: {
           anonymize_ip: true,
