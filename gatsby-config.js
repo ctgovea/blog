@@ -120,6 +120,24 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
-    }
+    },
+    {
+      // replace 'gatsby-plugin-google-analytics' with the new one
+      resolve: 'gatsby-plugin-google-gtag',
+      options: {
+          trackingIds: [
+              process.env.GA_MEASUREMENT_ID, // GA Measurement
+          ],
+          gtagConfig: {
+              optimize_id: 'OPT_CONTAINER_ID',
+              anonymize_ip: true,
+              cookie_expires: 0,
+          },
+          pluginConfig: {
+              head: true,
+              respectDNT: true,
+          },
+      },
+  },
   ],
 }
