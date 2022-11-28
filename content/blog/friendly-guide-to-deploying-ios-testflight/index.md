@@ -372,7 +372,7 @@ Better yet, you can use environment variables and if you name them as specified 
 
 In your `/ios/fastlane/` folder, create an `.env` file that will be used when running *fastlane* locally. We'll set these in CircleCI as well when we get to set up the pipeline. Don't check-in the `.env` file to source control.
 
-```env
+``` bash
 APP_STORE_CONNECT_API_KEY_KEY_ID=D83848D23
 APP_STORE_CONNECT_API_KEY_ISSUER_ID=227b0bbf-ada8-458c-9d62-3d8022b7d07f
 APP_STORE_CONNECT_API_KEY_KEY=YourBase64Key
