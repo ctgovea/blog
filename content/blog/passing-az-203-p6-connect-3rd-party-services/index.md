@@ -168,7 +168,7 @@ az servicebus queue create
 
 Or the equivalent powershell command:
 
-``` ps
+``` powershell
 # ⚠️ Creating a service bus queue in Powershell
 New-AzureRmServiceBusQueue
     -ResourceGroupName servicebus
